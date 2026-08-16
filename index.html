@@ -309,6 +309,38 @@
   }
   .card-link::after{content:" →"}
 
+  .cards-2{grid-template-columns:repeat(2,1fr)}
+
+  /* field-note case study */
+  .case{background:var(--color-petal);border:1px solid var(--color-fog);border-radius:var(--radius-cards);
+    padding:var(--card-padding);margin-top:var(--spacing-40);
+    display:grid;grid-template-columns:1.15fr .85fr;gap:var(--spacing-40)}
+  .case h3{font-family:var(--font-gt-haptik);font-weight:700;font-size:var(--text-heading);
+    line-height:var(--leading-heading);letter-spacing:-.01em;color:var(--color-heather);margin-bottom:var(--spacing-20)}
+  .case h3 em{font-style:italic;font-weight:400;color:var(--color-magenta)}
+  .beat{margin-bottom:var(--spacing-18)}
+  .beat b{display:block;font-size:var(--text-caption);font-weight:700;letter-spacing:.5px;
+    text-transform:uppercase;color:var(--color-stone-violet);margin-bottom:var(--spacing-5)}
+  .beat p{font-size:var(--text-body);line-height:var(--leading-body);color:var(--color-lavender-smoke)}
+  .kicker{border-left:3px solid var(--color-magenta);padding:var(--spacing-5) 0 var(--spacing-5) var(--spacing-15);
+    font-size:var(--text-body);line-height:var(--leading-body);color:var(--color-heather);
+    font-weight:500;margin-top:var(--spacing-20)}
+  .receipt{background:var(--color-bone);border:1px solid var(--color-silver);border-radius:var(--radius-cards);
+    padding:var(--spacing-25);height:fit-content}
+  .receipt h4{font-size:var(--text-caption);font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+    color:var(--color-stone-violet);margin-bottom:var(--spacing-15)}
+  .rc-row{display:flex;justify-content:space-between;align-items:baseline;gap:var(--spacing-12);
+    padding:var(--spacing-9) 0;border-bottom:1px dashed var(--color-silver);
+    font-size:var(--text-body-sm);color:var(--color-dusty-mauve)}
+  .rc-row .v{font-weight:800;font-size:var(--text-body);color:var(--color-heather);white-space:nowrap}
+  .rc-row.total{border-bottom:none;border-top:2px solid var(--color-heather);margin-top:var(--spacing-9);padding-top:var(--spacing-14)}
+  .rc-row.total span:first-child{font-weight:700;color:var(--color-heather)}
+  .rc-row.total .v{font-size:var(--text-heading-sm)}
+  .verdict{margin-top:var(--spacing-15);text-align:center;font-size:13px;font-weight:700;letter-spacing:.5px;
+    text-transform:uppercase;background:var(--color-bubblegum-wash);border:2px solid var(--color-magenta);
+    color:var(--color-plum);border-radius:var(--radius-pills);padding:var(--spacing-8) var(--spacing-14)}
+  .fine{margin-top:var(--spacing-12);font-size:var(--text-caption);line-height:var(--leading-caption);color:var(--color-stone-violet)}
+
   /* ---------- contact (Plum stage) ---------- */
   .contact{
     background:var(--color-plum);
@@ -341,6 +373,8 @@
     .nav-links{display:none}
     .about-row{grid-template-columns:1fr;gap:var(--spacing-30)}
     .cards{grid-template-columns:1fr}
+    .cards-2{grid-template-columns:1fr}
+    .case{grid-template-columns:1fr;gap:var(--spacing-25)}
     .hero{padding:var(--spacing-75) 0 var(--spacing-90)}
     section{padding:var(--spacing-75) 0}
     .contact{padding:var(--spacing-90) 0 var(--spacing-75)}
@@ -468,7 +502,7 @@
       <h2>Work <span class="rotalic">samples</span></h2>
       <p class="sec-sub">Working AI tools built with Claude — each one solving a real problem from my day-to-day analytics work. Open them and use them live.</p>
     </div>
-    <div class="cards">
+    <div class="cards cards-2">
       <article class="card">
         <div class="card-shot"><img src="tool-incrementality.png" alt="Screenshot of the Incrementality and Targeting Decision Tool: segment table with ROI and Fund/Hold decisions" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
         <div class="icon-circle" aria-hidden="true">
@@ -489,16 +523,34 @@
         <p>Is the lift real, or just noise? A two-proportion significance test for the holdout tests that validate every incrementality call — control vs. treatment, lift, confidence interval, and a clear verdict.</p>
         <a class="card-link" href="https://supriyakhadake.github.io/ab-test-readout/" target="_blank" rel="noopener">Open the live tool</a>
       </article>
-      <article class="card">
-        <div class="card-shot"><img src="tool-skills.png" alt="Screenshot of the Custom Claude Skills Library" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-        <div class="icon-circle" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
-        </div>
-        <span class="card-meta">Reusable judgment</span>
-        <h3>Custom Claude Skills Library</h3>
-        <p>A library of custom Claude Skills encoding how I make analytics decisions — incrementality triage, funnel leak diagnostics, cohort retention &amp; LTV — across 8 tools and 10 workflows.</p>
-        <a class="card-link" href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener">See it on LinkedIn</a>
-      </article>
+      
+    </div>
+
+    <div class="case">
+      <div>
+        <span class="tag">Field note &middot; Matched-market test</span>
+        <h3>Can a billboard prove it <em>moved the needle?</em></h3>
+        <div class="beat"><b>The problem</b>
+          <p>Offline channels can't be A/B tested at the user level &mdash; there's no impression to randomize and no holdout to carve. A billboard goes up in Chicago, applications rise, and everyone claims the win. But how much of that rise was the billboard?</p></div>
+        <div class="beat"><b>The approach</b>
+          <p>Find Chicago a statistical twin &mdash; a city matched on income, customer mix, traffic, business density, and seasonality. Detroit qualifies. Chicago gets the billboards; Detroit doesn't. Then compare each city to itself, before and after: a difference-in-differences design.</p></div>
+        <div class="beat"><b>The call</b>
+          <p>Chicago rose by 300 applications &mdash; but Detroit rose by 70 with no billboard at all. That 70 is the market tide. Only the gap between them is the billboard's real effect.</p></div>
+        <div class="kicker">The naive readout would have credited the billboard with +300 &mdash; overstating its impact by 30%. The twin city is what makes the number honest.</div>
+      </div>
+      <div class="receipt">
+        <h4>The receipt</h4>
+        <div class="rc-row"><span>Chicago, before &rarr; after</span><span class="v">1,000 &rarr; 1,300</span></div>
+        <div class="rc-row"><span>Chicago lift</span><span class="v">+300</span></div>
+        <div class="rc-row"><span>Detroit (twin), before &rarr; after</span><span class="v">980 &rarr; 1,050</span></div>
+        <div class="rc-row"><span>Detroit lift (market tide)</span><span class="v">+70</span></div>
+        <div class="rc-row"><span>Incremental apps (300 &minus; 70)</span><span class="v">230</span></div>
+        <div class="rc-row"><span>Revenue @ $2,000 avg</span><span class="v">$460K</span></div>
+        <div class="rc-row"><span>Campaign cost</span><span class="v">$260K</span></div>
+        <div class="rc-row total"><span>Net incremental</span><span class="v">+$200K</span></div>
+        <div class="verdict">Verdict: Positive ROI &mdash; fund it</div>
+        <p class="fine">Illustrative numbers. The method &mdash; matched-market difference-in-differences &mdash; is the point.</p>
+      </div>
     </div>
   </div>
 </section>
