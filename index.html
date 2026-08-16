@@ -265,6 +265,18 @@
   .card.is-featured .card-shot{border-color:var(--color-fog)}
   .card-shot img{display:block;width:100%;height:auto}
 
+  .certs{margin-top:var(--spacing-75)}
+  .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-25)}
+  .cert-group{background:var(--color-card,var(--color-bone));border:1px solid var(--color-silver);
+    border-radius:var(--radius-cards);padding:var(--card-padding)}
+  .cert-group-label{display:block;font-family:var(--font-inter);font-weight:700;font-size:var(--text-caption);
+    letter-spacing:.5px;text-transform:uppercase;color:var(--color-stone-violet);margin-bottom:var(--spacing-15)}
+  .cert-row{display:flex;justify-content:space-between;align-items:baseline;gap:var(--spacing-12);
+    padding:var(--spacing-10) 0;border-bottom:1px dashed var(--color-silver)}
+  .cert-row:last-child{border-bottom:none}
+  .cert-name{font-family:var(--font-inter);font-size:var(--text-body-sm);color:var(--color-lavender-smoke);font-weight:500}
+  .cert-issuer{font-family:var(--font-inter);font-size:12.5px;color:var(--color-stone-violet);white-space:nowrap}
+
   /* about — how I operate strip */
   .operate{margin-top:var(--spacing-75)}
   .operate-title{
@@ -375,6 +387,7 @@
     .cards{grid-template-columns:1fr}
     .cards-2{grid-template-columns:1fr}
     .case{grid-template-columns:1fr;gap:var(--spacing-25)}
+    .cert-grid{grid-template-columns:1fr}
     .hero{padding:var(--spacing-75) 0 var(--spacing-90)}
     section{padding:var(--spacing-75) 0}
     .contact{padding:var(--spacing-90) 0 var(--spacing-75)}
@@ -466,7 +479,7 @@
 
     <div class="operate">
       <h3 class="operate-title">How I operate</h3>
-      <div class="cards">
+      <div class="cards cards-2">
         <article class="card">
           <div class="icon-circle" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg>
@@ -491,6 +504,33 @@
           <h3>Built for the room</h3>
           <p>Cross-functional partnership with Marketing, Product, Commercial, Risk, and Finance, vendor and partner management, and executive reporting that leadership actually reads — performance framed as decisions, not dashboards.</p>
         </article>
+        <article class="card">
+          <div class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 19h16M7 15v-4M12 15V7M17 15v-7"/></svg>
+          </div>
+          <span class="card-meta">Reporting &amp; Optimization</span>
+          <h3>Dashboards that drive the next move</h3>
+          <p>Self-serve dashboards and reporting infrastructure in BigQuery, Python, and Tableau, plus channel pacing and forecasting across weekly, monthly, and quarterly horizons — built to catch underperformance early and reallocate budget while a campaign is still live, not after the fact.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="certs">
+      <h3 class="operate-title">Certifications</h3>
+      <div class="cert-grid">
+        <div class="cert-group">
+          <span class="cert-group-label">AI &amp; Automation</span>
+          <div class="cert-row"><span class="cert-name">Claude 101</span><span class="cert-issuer">Anthropic</span></div>
+          <div class="cert-row"><span class="cert-name">Claude Code 101: From Prompt to Product</span><span class="cert-issuer">Anthropic</span></div>
+          <div class="cert-row"><span class="cert-name">Introduction to Claude Cowork</span><span class="cert-issuer">Anthropic</span></div>
+          <div class="cert-row"><span class="cert-name">AI Coder: Complete Claude Code &amp; Coding Agents</span><span class="cert-issuer">Udemy</span></div>
+        </div>
+        <div class="cert-group">
+          <span class="cert-group-label">Data &amp; Visualization</span>
+          <div class="cert-row"><span class="cert-name">Tableau 10 Advanced Training: Master Tableau in Data Science</span><span class="cert-issuer">Udemy</span></div>
+          <div class="cert-row"><span class="cert-name">Tableau 10 A-Z: Hands-On Tableau Training for Data Science</span><span class="cert-issuer">Udemy</span></div>
+          <div class="cert-row"><span class="cert-name">Prepare Data for Looker Dashboards and Reports</span><span class="cert-issuer">Google</span></div>
+        </div>
       </div>
     </div>
   </div>
