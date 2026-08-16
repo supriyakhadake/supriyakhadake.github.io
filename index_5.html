@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supriya Khadake — Growth & Marketing Analytics Leader</title>
+<meta name="description" content="Analytics leader with 8+ years in fintech. Experimentation, attribution, incrementality, and AI-enabled analytics tools that turn marketing data into decisions leadership acts on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Inter+Tight:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Colors */
+    --color-plum:#2c1338;
+    --color-heather:#412a4c;
+    --color-magenta:#e57cd8;
+    --color-lavender-smoke:#564260;
+    --color-dusty-mauve:#6b5a74;
+    --color-stone-violet:#817187;
+    --color-ink:#000000;
+    --color-bone:#fefbfa;
+    --color-silver:#d5d0d7;
+    --color-fog:#c0b8c3;
+    --color-blush:#fdeae2;
+    --color-petal:#fcf1f8;
+    --color-orchid-mist:#fae5f7;
+    --color-bubblegum-wash:#f7d8f3;
+    --color-amber:#ffde91;
+
+    /* Typography — families (GT Haptik → Inter Tight substitute) */
+    --font-inter:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --font-gt-haptik:'Inter Tight',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --font-gt-haptik-rotalic:'Inter Tight',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+
+    /* Typography — scale */
+    --text-caption:12px;   --leading-caption:1.5;
+    --text-body-sm:14px;   --leading-body-sm:1.55;
+    --text-body:16px;      --leading-body:1.5;
+    --text-subheading:18px;--leading-subheading:1.4;
+    --text-heading-sm:22px;--leading-heading-sm:1.35;
+    --text-heading:32px;   --leading-heading:1.25;
+    --text-heading-lg:43px;--leading-heading-lg:1.2;
+    --text-display:60px;   --leading-display:1.15;
+    --text-display-xl:69px;--leading-display-xl:1.1;
+
+    /* Spacing scale */
+    --spacing-5:5px; --spacing-8:8px; --spacing-9:9px; --spacing-10:10px;
+    --spacing-12:12px; --spacing-14:14px; --spacing-15:15px; --spacing-18:18px;
+    --spacing-20:20px; --spacing-25:25px; --spacing-30:30px; --spacing-40:40px;
+    --spacing-75:75px; --spacing-90:90px; --spacing-113:113px; --spacing-170:170px;
+
+    /* Layout */
+    --page-max-width:1200px;
+    --section-gap:75px;
+    --card-padding:30px;
+    --element-gap:10px;
+
+    /* Radii — three only: cards/inputs 10, buttons 26, pills/tags 200 */
+    --radius-cards:10px;
+    --radius-inputs:10px;
+    --radius-buttons:26px;
+    --radius-pills:200px;
+    --radius-tags:200px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font-inter);
+    font-size:var(--text-body);
+    line-height:var(--leading-body);
+    background:var(--color-bone);
+    color:var(--color-ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--color-lavender-smoke);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--color-magenta);outline-offset:3px}
+  .wrap{max-width:var(--page-max-width);margin:0 auto;padding-left:var(--spacing-25);padding-right:var(--spacing-25)}
+
+  /* ---------- header (Plum band) ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:var(--color-plum);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--spacing-20);height:64px}
+  .wordmark{font-family:var(--font-gt-haptik);font-size:var(--text-heading-sm);line-height:1;color:var(--color-blush);letter-spacing:-0.01em}
+  .wordmark b{font-weight:700}
+  .wordmark span{font-weight:400;color:var(--color-bone)}
+  .wordmark:hover{text-decoration:none}
+  .nav-links{display:flex;align-items:center;gap:var(--spacing-25);list-style:none}
+  .nav-links a{
+    font-family:var(--font-inter);font-weight:500;font-size:15px;
+    color:var(--color-bone);opacity:.85;padding-bottom:2px;border-bottom:2px solid transparent;
+  }
+  .nav-links a:hover{opacity:1;text-decoration:none;border-bottom-color:var(--color-magenta)}
+  .pill-cta{
+    font-family:var(--font-inter);font-weight:500;font-size:var(--text-body-sm);
+    background:var(--color-blush);color:var(--color-plum);
+    border-radius:var(--radius-pills);padding:var(--spacing-8) var(--spacing-18);
+    white-space:nowrap;
+  }
+  .pill-cta:hover{text-decoration:none;background:var(--color-bubblegum-wash)}
+
+  /* ---------- hero (Plum stage) ---------- */
+  .hero{
+    background:var(--color-plum);
+    padding:var(--spacing-90) 0 var(--spacing-113);
+    text-align:center;
+  }
+  .hero-tag{
+    display:inline-block;
+    font-family:var(--font-inter);font-weight:500;font-size:13px;
+    background:var(--color-bubblegum-wash);color:var(--color-plum);
+    border-radius:var(--radius-tags);padding:6px var(--spacing-14);
+    margin-bottom:var(--spacing-25);
+  }
+  h1{
+    font-family:var(--font-gt-haptik);font-weight:700;
+    font-size:clamp(43px,6vw,var(--text-display-xl));
+    line-height:var(--leading-display-xl);
+    letter-spacing:-0.02em;
+    color:var(--color-bone);
+    max-width:900px;margin:0 auto var(--spacing-25);
+  }
+  .rotalic{
+    font-family:var(--font-gt-haptik-rotalic);
+    font-style:italic;font-weight:400;
+    color:var(--color-magenta);
+  }
+  .hero-sub{
+    font-family:var(--font-inter);font-weight:400;
+    font-size:var(--text-subheading);line-height:var(--leading-subheading);
+    color:var(--color-fog);
+    max-width:640px;margin:0 auto var(--spacing-30);
+  }
+  .btn-row{display:flex;justify-content:center;gap:var(--spacing-15);flex-wrap:wrap}
+  .btn{
+    display:inline-block;
+    font-family:var(--font-inter);font-weight:500;font-size:16px;line-height:1.25;
+    border-radius:var(--radius-buttons);padding:var(--spacing-14) 28px;
+  }
+  .btn:hover{text-decoration:none}
+  .btn-primary{background:var(--color-magenta);color:var(--color-bone);border:none}
+  .btn-primary:hover{background:var(--color-bubblegum-wash);color:var(--color-plum)}
+  .btn-ghost{background:transparent;border:1px solid var(--color-bone);color:var(--color-bone)}
+  .btn-ghost:hover{background:var(--color-bone);color:var(--color-plum)}
+
+  /* hero product preview — data table card with traffic-light dots */
+  .preview{
+    max-width:760px;margin:var(--spacing-75) auto 0;
+    background:var(--color-bone);
+    border-radius:var(--radius-cards);
+    overflow:hidden;text-align:left;
+  }
+  .preview-bar{
+    display:flex;align-items:center;gap:var(--spacing-8);
+    padding:var(--spacing-12) var(--spacing-18);
+    border-bottom:1px solid var(--color-silver);
+  }
+  .dot{width:10px;height:10px;border-radius:var(--radius-pills)}
+  .dot-1{background:var(--color-magenta)}
+  .dot-2{background:var(--color-heather)}
+  .dot-3{background:var(--color-fog)}
+  .preview-title{
+    margin-left:var(--spacing-8);
+    font-family:var(--font-inter);font-weight:700;font-size:var(--text-caption);
+    letter-spacing:.5px;text-transform:uppercase;color:var(--color-dusty-mauve);
+  }
+  table.preview-table{width:100%;border-collapse:collapse}
+  .preview-table th{
+    font-family:var(--font-inter);font-weight:700;font-size:var(--text-caption);
+    text-transform:uppercase;letter-spacing:.5px;color:var(--color-dusty-mauve);
+    text-align:left;padding:var(--spacing-12) var(--spacing-18);
+    border-bottom:1px solid var(--color-silver);
+  }
+  .preview-table td{
+    font-family:var(--font-inter);font-weight:400;font-size:var(--text-body-sm);
+    color:var(--color-lavender-smoke);
+    padding:var(--spacing-14) var(--spacing-18);
+    border-bottom:1px solid var(--color-silver);
+  }
+  .preview-table tr:last-child td{border-bottom:none}
+  .preview-table tr.is-selected td{background:var(--color-petal)}
+  .preview-table td.num{text-align:right;font-weight:500}
+  .preview-table th.num{text-align:right}
+  .row-tag{
+    display:inline-block;
+    font-family:var(--font-inter);font-weight:500;font-size:var(--text-caption);
+    border-radius:var(--radius-tags);padding:3px var(--spacing-12);
+  }
+  .row-tag.fund{background:var(--color-bubblegum-wash);color:var(--color-plum)}
+  .row-tag.hold{background:var(--color-amber);color:var(--color-plum)}
+
+  /* ---------- content sections (Bone) ---------- */
+  section{padding:var(--spacing-90) 0}
+  .sec-head{max-width:720px;margin:0 auto var(--spacing-40);text-align:center}
+  h2{
+    font-family:var(--font-gt-haptik);font-weight:700;
+    font-size:clamp(32px,4.2vw,var(--text-heading-lg));
+    line-height:var(--leading-heading-lg);
+    letter-spacing:-0.01em;color:var(--color-heather);
+    margin-bottom:var(--spacing-15);
+  }
+  .sec-sub{
+    font-family:var(--font-inter);font-size:var(--text-subheading);
+    line-height:var(--leading-subheading);color:var(--color-dusty-mauve);
+  }
+
+  /* about — 2-column row */
+  .about-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-40);
+    align-items:center;
+  }
+  .about-copy p{
+    font-family:var(--font-inter);font-size:var(--text-body);
+    line-height:var(--leading-body);color:var(--color-lavender-smoke);
+    margin-bottom:var(--spacing-18);
+  }
+  .about-copy p:last-of-type{margin-bottom:var(--spacing-25)}
+  .tag-row{display:flex;flex-wrap:wrap;gap:var(--element-gap)}
+  .tag{
+    font-family:var(--font-inter);font-weight:500;font-size:13px;
+    background:var(--color-blush);color:var(--color-heather);
+    border-radius:var(--radius-tags);padding:6px var(--spacing-14);
+  }
+  .stats-card{
+    background:var(--color-petal);
+    border:1px solid var(--color-fog);
+    border-radius:var(--radius-cards);
+    padding:var(--card-padding);
+    display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-25) var(--spacing-30);
+  }
+  .stat .num{
+    font-family:var(--font-inter);font-weight:800;
+    font-size:var(--text-heading);line-height:var(--leading-heading);
+    color:var(--color-heather);
+  }
+  .stat .lbl{
+    font-family:var(--font-inter);font-size:var(--text-body-sm);
+    line-height:var(--leading-body-sm);color:var(--color-dusty-mauve);
+    margin-top:var(--spacing-5);
+  }
+
+  .card-shot{
+    border:1px solid var(--color-silver);
+    border-radius:var(--radius-cards);
+    overflow:hidden;
+    margin-bottom:var(--spacing-5);
+  }
+  .card.is-featured .card-shot{border-color:var(--color-fog)}
+  .card-shot img{display:block;width:100%;height:auto}
+
+  /* about — how I operate strip */
+  .operate{margin-top:var(--spacing-75)}
+  .operate-title{
+    font-family:var(--font-inter);font-weight:700;
+    font-size:var(--text-heading-sm);line-height:var(--leading-heading-sm);
+    color:var(--color-heather);text-align:center;
+    margin-bottom:var(--spacing-25);
+  }
+
+  /* work samples — 3-column feature card grid */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--spacing-20)}
+  .card{
+    background:var(--color-bone);
+    border:1px solid var(--color-silver);
+    border-radius:var(--radius-cards);
+    padding:var(--card-padding);
+    display:flex;flex-direction:column;gap:var(--spacing-15);
+  }
+  .card.is-featured{background:var(--color-petal);border-color:var(--color-fog)}
+  .icon-circle{
+    width:40px;height:40px;border-radius:var(--radius-pills);
+    background:var(--color-blush);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .icon-circle svg{width:20px;height:20px;stroke:var(--color-dusty-mauve);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{
+    font-family:var(--font-inter);font-weight:700;
+    font-size:var(--text-heading-sm);line-height:var(--leading-heading-sm);
+    color:var(--color-heather);
+  }
+  .card p{
+    font-family:var(--font-inter);font-size:var(--text-body);
+    line-height:var(--leading-body);color:var(--color-dusty-mauve);flex:1;
+  }
+  .card-meta{
+    font-family:var(--font-inter);font-weight:700;font-size:var(--text-caption);
+    letter-spacing:.5px;text-transform:uppercase;color:var(--color-stone-violet);
+  }
+  .card-link{
+    font-family:var(--font-inter);font-weight:700;font-size:var(--text-body-sm);
+    color:var(--color-heather);
+  }
+  .card-link::after{content:" →"}
+
+  /* ---------- contact (Plum stage) ---------- */
+  .contact{
+    background:var(--color-plum);
+    padding:var(--spacing-113) 0 var(--spacing-75);
+    text-align:center;
+  }
+  .contact h2{color:var(--color-bone)}
+  .contact .sec-sub{color:var(--color-fog);max-width:640px;margin:0 auto var(--spacing-30)}
+  .contact-note{
+    font-family:var(--font-inter);font-size:var(--text-body-sm);
+    color:var(--color-stone-violet);margin-top:var(--spacing-25);
+  }
+  .contact-note a{color:var(--color-fog)}
+
+  footer{
+    background:var(--color-plum);
+    border-top:1px solid var(--color-heather);
+    padding:var(--spacing-25) 0;
+  }
+  .foot-inner{
+    display:flex;justify-content:space-between;align-items:center;gap:var(--spacing-15);flex-wrap:wrap;
+  }
+  footer span{
+    font-family:var(--font-inter);font-size:var(--text-caption);
+    line-height:var(--leading-caption);color:var(--color-fog);
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .nav-links{display:none}
+    .about-row{grid-template-columns:1fr;gap:var(--spacing-30)}
+    .cards{grid-template-columns:1fr}
+    .hero{padding:var(--spacing-75) 0 var(--spacing-90)}
+    section{padding:var(--spacing-75) 0}
+    .contact{padding:var(--spacing-90) 0 var(--spacing-75)}
+  }
+  @media (max-width:600px){
+    .stats-card{grid-template-columns:1fr 1fr;gap:var(--spacing-20)}
+    .preview-table th:nth-child(3),.preview-table td:nth-child(3){display:none}
+    .btn{width:100%;text-align:center}
+    .btn-row{flex-direction:column;align-items:stretch}
+    .wrap{padding-left:var(--spacing-18);padding-right:var(--spacing-18)}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="wordmark" href="#top"><b>supriya</b> <span>khadake</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work samples</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="pill-cta" href="mailto:khadakesupriya@gmail.com">Get in touch</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="hero-tag">Data Science Manager · PayPal</span>
+    <h1>I turn marketing data into <span class="rotalic">decisions</span> leadership acts on.</h1>
+    <p class="hero-sub">Growth &amp; marketing analytics leader with 10 years in fintech — 8 at PayPal, plus consulting for American Express — specializing in experimentation, attribution, incrementality, and AI-powered analytics tools you can try live.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#work">See my work</a>
+      <a class="btn btn-ghost" href="mailto:khadakesupriya@gmail.com">Email me</a>
+    </div>
+
+    <div class="preview" role="img" aria-label="Preview of the Incrementality and Targeting Decision Tool: a table of marketing segments with ROI and fund or hold decisions">
+      <div class="preview-bar">
+        <span class="dot dot-1"></span><span class="dot dot-2"></span><span class="dot dot-3"></span>
+        <span class="preview-title">Incrementality &amp; Targeting Decision Tool</span>
+      </div>
+      <table class="preview-table">
+        <thead>
+          <tr><th>Segment</th><th class="num">Net inc. $</th><th class="num">ROI</th><th>Decision</th></tr>
+        </thead>
+        <tbody>
+          <tr class="is-selected"><td>Segment 2</td><td class="num">$1,062,000</td><td class="num">472%</td><td><span class="row-tag fund">Fund</span></td></tr>
+          <tr><td>Segment 5</td><td class="num">$624,000</td><td class="num">650%</td><td><span class="row-tag fund">Fund</span></td></tr>
+          <tr><td>Segment 4</td><td class="num">$332,500</td><td class="num">64%</td><td><span class="row-tag hold">Hold</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Analytics that gets <span class="rotalic">acted on</span></h2>
+      <p class="sec-sub">Diagnose where growth is leaking, build the measurement to quantify it, and translate the numbers into decisions.</p>
+    </div>
+    <div class="about-row">
+      <div class="about-copy">
+        <p>I lead growth and marketing analytics at PayPal — targeting and audience selection, behavioral segmentation, propensity scoring, attribution modeling, and experimentation standards across A/B tests, holdouts, and incrementality measurement. I've supported campaigns across email, onsite banners and placements, direct mail, digital (paid search and social), and sales channels, along with the data partnerships and vendors behind them, working cross-functionally with Marketing, Product, Commercial, Risk, and Finance.</p>
+        <p>Before PayPal, I built data engineering and reporting solutions for American Express as a consultant — the start of 10 years working with financial-services data. Increasingly, I build AI-enabled analytics tools with Claude: deterministic math does the math, AI does the synthesis. That principle cut recurring reporting turnaround from about two days to under four hours and standardized how experiment readouts and budget recommendations get made.</p>
+        <div class="tag-row">
+          <span class="tag">Experimentation</span>
+          <span class="tag">Incrementality</span>
+          <span class="tag">Attribution</span>
+          <span class="tag">Targeting &amp; Selection</span>
+          <span class="tag">Lifecycle &amp; LTV</span>
+          <span class="tag">Vendor Management</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Claude AI</span>
+        </div>
+      </div>
+      <div class="stats-card">
+        <div class="stat"><div class="num">~$1M</div><div class="lbl">Lost originations recovered through targeting &amp; suppression</div></div>
+        <div class="stat"><div class="num">~3M</div><div class="lbl">New acquisition prospects unlocked</div></div>
+        <div class="stat"><div class="num">+2M</div><div class="lbl">Addressable customer reach expanded</div></div>
+        <div class="stat"><div class="num">2d→4h</div><div class="lbl">Recurring reporting turnaround, via AI workflows</div></div>
+      </div>
+    </div>
+
+    <div class="operate">
+      <h3 class="operate-title">How I operate</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg>
+          </div>
+          <span class="card-meta">Execution</span>
+          <h3>End to end, not hand-offs</h3>
+          <p>From targeting and audience selection through channel launch, performance tracking, and reporting — I've owned the full loop across email, onsite placements, direct mail, paid search and social, and sales channels, including the vendors and data partners that power each one.</p>
+        </article>
+        <article class="card">
+          <div class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+          </div>
+          <span class="card-meta">Solutioning</span>
+          <h3>Ambiguity to recommendation</h3>
+          <p>I take an ambiguous business question, design the measurement to answer it, and land on a clear call — Fund / Hold / Suppress, Ship / Kill / Iterate — with the revenue case attached, not just the analysis.</p>
+        </article>
+        <article class="card">
+          <div class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM16 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20c0-3 2.5-5 6-5M22 10c0-3-2.5-5-6-5M11 13l2-2"/></svg>
+          </div>
+          <span class="card-meta">Stakeholders</span>
+          <h3>Built for the room</h3>
+          <p>Cross-functional partnership with Marketing, Product, Commercial, Risk, and Finance, vendor and partner management, and executive reporting that leadership actually reads — performance framed as decisions, not dashboards.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Work <span class="rotalic">samples</span></h2>
+      <p class="sec-sub">Working AI tools built with Claude — each one solving a real problem from my day-to-day analytics work. Open them and use them live.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-shot"><img src="tool-incrementality.png" alt="Screenshot of the Incrementality and Targeting Decision Tool: segment table with ROI and Fund/Hold decisions" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+        </div>
+        <span class="card-meta">Budget allocation</span>
+        <h3>Incrementality &amp; Targeting Decision Tool</h3>
+        <p>Fund what moved the needle — not what merely followed it. Scores segments on true incremental lift, tags each Fund / Hold / Suppress by ROI, and generates the executive budget recommendation, validated against a randomized holdout.</p>
+        <a class="card-link" href="https://supriyakhadake.github.io/incrementality-tool/" target="_blank" rel="noopener">Open the live tool</a>
+      </article>
+      <article class="card is-featured">
+        <div class="card-shot"><img src="tool-abtest.png" alt="Screenshot of the A/B Test Readout tool: control and variant inputs with a +17.4% relative lift result" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 3h6M12 3v5M12 8a7 7 0 1 0 7 7M12 8a7 7 0 0 1 7 7M12 15l4-4"/></svg>
+        </div>
+        <span class="card-meta">Experimentation</span>
+        <h3>A/B Test Readout &amp; Call</h3>
+        <p>Is the lift real, or just noise? A two-proportion significance test for the holdout tests that validate every incrementality call — control vs. treatment, lift, confidence interval, and a clear verdict.</p>
+        <a class="card-link" href="https://supriyakhadake.github.io/ab-test-readout/" target="_blank" rel="noopener">Open the live tool</a>
+      </article>
+      <article class="card">
+        <div class="card-shot"><img src="tool-skills.png" alt="Screenshot of the Custom Claude Skills Library" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+        </div>
+        <span class="card-meta">Reusable judgment</span>
+        <h3>Custom Claude Skills Library</h3>
+        <p>A library of custom Claude Skills encoding how I make analytics decisions — incrementality triage, funnel leak diagnostics, cohort retention &amp; LTV — across 8 tools and 10 workflows.</p>
+        <a class="card-link" href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener">See it on LinkedIn</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's run the next <span class="rotalic">experiment</span></h2>
+    <p class="sec-sub">Questions about the tools, a measurement problem worth talking through, or just want to compare notes on AI-enabled analytics? My inbox is open.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="mailto:khadakesupriya@gmail.com">khadakesupriya@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="contact-note">Or find me on <a href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener">linkedin.com/in/supriyakhadake</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 Supriya Khadake</span>
+    <span>Built with Claude — deterministic math, AI synthesis</span>
+  </div>
+</footer>
+
+</body>
+</html>
