@@ -19,7 +19,16 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Supriya Khadake — Data Science Leader, Growth & Marketing">
 <meta name="twitter:description" content="I turn marketing data into decisions leadership acts on. 10 years in fintech — experimentation, attribution, incrementality, and live AI-powered analytics tools.">
-<meta name="twitter:image" content="https://supriyakhadake.github.io/og-image.png"><link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="twitter:image" content="https://supriyakhadake.github.io/og-image.png">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q68STYKGQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3Q68STYKGQ');
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Inter+Tight:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -412,7 +421,7 @@
       <li><a href="#work">Work samples</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="pill-cta" href="mailto:khadakesupriya@gmail.com">Get in touch</a>
+    <a class="pill-cta" href="mailto:khadakesupriya@gmail.com" onclick="gtag('event','contact_click',{method:'email_nav'})">Get in touch</a>
   </div>
 </header>
 
@@ -422,8 +431,8 @@
     <h1>I turn marketing data into <span class="rotalic">decisions</span> leadership acts on.</h1>
     <p class="hero-sub">Data science leader in growth &amp; marketing with 10 years in fintech — 8 at PayPal, plus consulting for American Express — specializing in experimentation, attribution, incrementality, and AI-powered analytics tools you can try live.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="#work">See my work</a>
-      <a class="btn btn-ghost" href="mailto:khadakesupriya@gmail.com">Email me</a>
+      <a class="btn btn-primary" href="#work" onclick="gtag('event','cta_click',{cta:'see_my_work'})">See my work</a>
+      <a class="btn btn-ghost" href="mailto:khadakesupriya@gmail.com" onclick="gtag('event','contact_click',{method:'email_hero'})">Email me</a>
     </div>
 
     <div class="preview" role="img" aria-label="Preview of the Incrementality and Targeting Decision Tool: a table of marketing segments with ROI and fund or hold decisions">
@@ -551,7 +560,7 @@
         <span class="card-meta">Budget allocation</span>
         <h3>Incrementality &amp; Targeting Decision Tool</h3>
         <p>Fund what moved the needle — not what merely followed it. Scores segments on true incremental lift, tags each Fund / Hold / Suppress by ROI, and generates the executive budget recommendation, validated against a randomized holdout.</p>
-        <a class="card-link" href="https://supriyakhadake.github.io/incrementality-tool/" target="_blank" rel="noopener">Open the live tool</a>
+        <a class="card-link" href="https://supriyakhadake.github.io/incrementality-tool/" target="_blank" rel="noopener" onclick="gtag('event','tool_click',{tool:'incrementality'})">Open the live tool</a>
       </article>
       <article class="card is-featured">
         <div class="card-shot"><img src="tool-abtest.png" alt="Screenshot of the A/B Test Readout tool: control and variant inputs with a +17.4% relative lift result" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -561,7 +570,7 @@
         <span class="card-meta">Experimentation</span>
         <h3>A/B Test Readout &amp; Call</h3>
         <p>Is the lift real, or just noise? A two-proportion significance test for the holdout tests that validate every incrementality call — control vs. treatment, lift, confidence interval, and a clear verdict.</p>
-        <a class="card-link" href="https://supriyakhadake.github.io/ab-test-readout/" target="_blank" rel="noopener">Open the live tool</a>
+        <a class="card-link" href="https://supriyakhadake.github.io/ab-test-readout/" target="_blank" rel="noopener" onclick="gtag('event','tool_click',{tool:'ab_test_readout'})">Open the live tool</a>
       </article>
       
     </div>
@@ -600,10 +609,10 @@
     <h2>Let's run the next <span class="rotalic">experiment</span></h2>
     <p class="sec-sub">Questions about the tools, a measurement problem worth talking through, or just want to compare notes on AI-enabled analytics? My inbox is open.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="mailto:khadakesupriya@gmail.com">khadakesupriya@gmail.com</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-primary" href="mailto:khadakesupriya@gmail.com" onclick="gtag('event','contact_click',{method:'email_footer'})">khadakesupriya@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener" onclick="gtag('event','contact_click',{method:'linkedin_footer'})">LinkedIn</a>
     </div>
-    <p class="contact-note">Or find me on <a href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener">linkedin.com/in/supriyakhadake</a></p>
+    <p class="contact-note">Or find me on <a href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener" onclick="gtag('event','contact_click',{method:'linkedin_note'})">linkedin.com/in/supriyakhadake</a></p>
   </div>
 </div>
 
