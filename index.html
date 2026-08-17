@@ -376,6 +376,35 @@
   }
   .contact-note a{color:var(--color-fog)}
 
+  .contact-grid{
+    display:grid;grid-template-columns:1.3fr .7fr;gap:var(--spacing-40);
+    text-align:left;margin-top:var(--spacing-40);
+  }
+  .contact-form{display:flex;flex-direction:column;gap:var(--spacing-8)}
+  .cf-label{
+    font-family:var(--font-inter);font-weight:500;font-size:var(--text-body-sm);
+    color:var(--color-fog);margin-top:var(--spacing-14);
+  }
+  .cf-label:first-child{margin-top:0}
+  .cf-optional{color:var(--color-stone-violet);font-weight:400}
+  .cf-input{
+    font-family:var(--font-inter);font-size:var(--text-body);color:var(--color-plum);
+    background:var(--color-bone);border:1px solid var(--color-heather);
+    border-radius:var(--radius-inputs);padding:var(--spacing-12) var(--spacing-14);
+    width:100%;
+  }
+  .cf-input:focus{outline:2px solid var(--color-magenta);outline-offset:1px}
+  .cf-textarea{resize:vertical;font-family:var(--font-inter)}
+  .cf-submit{margin-top:var(--spacing-20);align-self:flex-start;border:none;cursor:pointer;font-size:16px}
+
+  .contact-direct{
+    border-left:1px solid var(--color-heather);
+    padding-left:var(--spacing-30);
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .btn-row-col{flex-direction:column;align-items:flex-start}
+  .btn-row-col .btn{width:100%;text-align:center}
+
   footer{
     background:var(--color-plum);
     border-top:1px solid var(--color-heather);
@@ -397,6 +426,8 @@
     .cards-2{grid-template-columns:1fr}
     .case{grid-template-columns:1fr;gap:var(--spacing-25)}
     .cert-grid{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+    .contact-direct{border-left:none;border-top:1px solid var(--color-heather);padding-left:0;padding-top:var(--spacing-25);margin-top:var(--spacing-10)}
     .hero{padding:var(--spacing-75) 0 var(--spacing-90)}
     section{padding:var(--spacing-75) 0}
     .contact{padding:var(--spacing-90) 0 var(--spacing-75)}
@@ -601,6 +632,30 @@
         <p class="fine">Illustrative numbers. The method &mdash; matched-market difference-in-differences &mdash; is the point.</p>
       </div>
     </div>
+
+    <div class="case">
+      <div>
+        <span class="tag">Field note &middot; Portfolio funnel diagnosis</span>
+        <h3>Applications were <em>falling</em> &mdash; was that actually the problem?</h3>
+        <div class="beat"><b>The signal</b>
+          <p>New-application volume (PIF) had been trending down quarter over quarter. Total portfolio volume looked fine on the surface &mdash; which made it tempting to file the PIF decline as noise and move on.</p></div>
+        <div class="beat"><b>The diagnosis</b>
+          <p>An end-to-end funnel review told a different story: portfolio growth wasn't coming from a healthy new-customer pipeline &mdash; renewals were doing the work. Meanwhile, federal Do-Not-Contact suppression volume was climbing quarter over quarter, shrinking the population the PIF funnel could even target in the first place.</p></div>
+        <div class="beat"><b>The shift</b>
+          <p>I brought the split to cross-functional stakeholders and reframed the question &mdash; not "why are applications down," but "how do we solve the suppression constraint that's shrinking the funnel." That moved the roadmap from optimizing PIF campaigns to fixing the actual input constraint.</p></div>
+        <div class="kicker">Renewals were masking a structural funnel problem. Without separating the two growth engines, the team would have kept tuning PIF campaigns and never touched the constraint actually shrinking them.</div>
+      </div>
+      <div class="receipt">
+        <h4>The split</h4>
+        <div class="rc-row"><span>Fed DNC suppression volume</span><span class="v">18K &rarr; 30K</span></div>
+        <div class="rc-row"><span>Suppression growth</span><span class="v">+67%</span></div>
+        <div class="rc-row"><span>New PIF applications (YoY)</span><span class="v">&minus;12%</span></div>
+        <div class="rc-row"><span>Renewal share of applications</span><span class="v">45% &rarr; 70%</span></div>
+        <div class="rc-row total"><span>Total portfolio volume</span><span class="v">Positive</span></div>
+        <div class="verdict">Verdict: Fix the constraint, not the symptom</div>
+        <p class="fine">Illustrative numbers. PIF = new-customer application funnel; DNC = Do-Not-Contact suppression list.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -608,11 +663,33 @@
   <div class="wrap">
     <h2>Let's run the next <span class="rotalic">experiment</span></h2>
     <p class="sec-sub">Questions about the tools, a measurement problem worth talking through, or just want to compare notes on AI-enabled analytics? My inbox is open.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="mailto:khadakesupriya@gmail.com" onclick="gtag('event','contact_click',{method:'email_footer'})">khadakesupriya@gmail.com</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener" onclick="gtag('event','contact_click',{method:'linkedin_footer'})">LinkedIn</a>
+
+    <div class="contact-grid">
+      <form class="contact-form" action="https://formspree.io/f/mjybagnr" method="POST" onsubmit="gtag('event','contact_click',{method:'form_submit'})">
+        <label class="cf-label" for="cf-name">Name</label>
+        <input class="cf-input" type="text" id="cf-name" name="name" required>
+
+        <label class="cf-label" for="cf-email">Email</label>
+        <input class="cf-input" type="email" id="cf-email" name="email" required>
+
+        <label class="cf-label" for="cf-phone">Phone <span class="cf-optional">(optional)</span></label>
+        <input class="cf-input" type="tel" id="cf-phone" name="phone">
+
+        <label class="cf-label" for="cf-message">Message</label>
+        <textarea class="cf-input cf-textarea" id="cf-message" name="message" rows="4" required></textarea>
+
+        <input type="text" name="_gotcha" style="display:none">
+        <button class="btn btn-primary cf-submit" type="submit">Send message</button>
+      </form>
+
+      <div class="contact-direct">
+        <span class="cf-label">Prefer to reach out directly?</span>
+        <div class="btn-row btn-row-col">
+          <a class="btn btn-ghost" href="mailto:khadakesupriya@gmail.com" onclick="gtag('event','contact_click',{method:'email_footer'})">khadakesupriya@gmail.com</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener" onclick="gtag('event','contact_click',{method:'linkedin_footer'})">LinkedIn</a>
+        </div>
+      </div>
     </div>
-    <p class="contact-note">Or find me on <a href="https://www.linkedin.com/in/supriyakhadake" target="_blank" rel="noopener" onclick="gtag('event','contact_click',{method:'linkedin_note'})">linkedin.com/in/supriyakhadake</a></p>
   </div>
 </div>
 
