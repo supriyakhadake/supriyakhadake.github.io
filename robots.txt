@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://supriyakhadake.github.io/sitemap.xml
